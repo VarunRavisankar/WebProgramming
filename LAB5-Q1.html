@@ -1,14 +1,59 @@
 <html>
 <head>
-    <title>Resume with Frames</title>
+    <title>Professional Resume</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 15px;
+            width: 200px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        nav a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #333;
+        }
+        main {
+            padding: 20px;
+        }
+        aside {
+            background-color: #f9f9f9;
+            padding: 15px;
+            width: 200px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
-<frameset rows="15%,*,15%" border="1">
-    <frame src="https://varunravisankar.github.io/WebProgramming/LAB5-Q1(HEADER).html" name="headerFrame" scrolling="no">
-    <frameset cols="20%,*,20%">
-        <frame src="navigation.html" name="navFrame" scrolling="auto">
-        <frame src="main.html" name="mainFrame" scrolling="auto">
-        <frame src="aside.html" name="asideFrame" scrolling="auto">
+<body>
+
+<frameset rows="100px,*,50px" framespacing="0" border="0">
+    <frame src="header.html" name="headerFrame" noresize />
+    <frameset cols="200px,*,200px" framespacing="0" border="0">
+        <frame src="nav.html" name="navFrame" noresize />
+        <frame src="main_content.html" name="mainContentFrame" />
+        <frame src="aside.html" name="asideFrame" noresize />
     </frameset>
-    <frame src="footer.html" name="footerFrame" scrolling="no">
+    <frame src="footer.html" name="footerFrame" noresize />
 </frameset>
+
+</body>
 </html>
