@@ -3,70 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 15px;
-            width: 200px;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        nav a {
-            display: block;
-            margin: 5px 0;
-            text-decoration: none;
-            color: #333;
-        }
-        main {
-            padding: 20px;
-        }
-        aside {
-            background-color: #f9f9f9;
-            padding: 15px;
-            width: 200px;
-            height: 100%;
-            box-sizing: border-box;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    <title>Resume with Frames</title>
 </head>
-<body>
-
-<frameset rows="100px,*,50px" framespacing="0" border="0">
-    <!-- Header -->
-    <frame src="https://varunravisankar.github.io/WebProgramming/header.html" name="headerFrame" noresize />
-
-    <!-- Main Content Layout -->
-    <frameset cols="200px,*,200px" framespacing="0" border="0">
-        <!-- Navigation -->
-        <frame src="nav.html" name="navFrame" noresize />
-
-        <!-- Main Content -->
-        <frame src="main_content.html" name="mainContentFrame" />
-
-        <!-- Aside -->
-        <frame src="aside.html" name="asideFrame" noresize />
+<frameset rows="15%, 75%, 10%" border="1">
+    <frame src="header.html" name="headerFrame">
+    <frameset cols="20%, 60%, 20%" border="1">
+        <frame src="nav.html" name="navFrame">
+        <frame src="main.html" name="mainFrame">
+        <frame src="aside.html" name="asideFrame">
     </frameset>
-
-    <!-- Footer -->
-    <frame src="footer.html" name="footerFrame" noresize />
+    <frame src="footer.html" name="footerFrame">
 </frameset>
-
-</body>
 </html>
