@@ -64,4 +64,31 @@ body {
     font-size: 0.9em;  
 } 
 
-#dog_svg_div {
+#dog_svg_div { 
+    justify-self: center; 
+} 
+ 
+.svg_title { 
+    color: rgba(92, 12, 47, 0.9);  
+    font-size: 1.5em; 
+    margin-top: 5%; 
+    text-align: center; 
+} 
+ 
+#svg_ball { 
+    animation: bounce 3s infinite ease-out;   
+} 
+ 
+@keyframes bounce { 
+    0% { 
+        transform: translateY(0) skewY(0) rotateZ(0deg); 
+    } 
+     
+    50% { 
+        transform: translateY(-50px) skewY(10deg) rotateZ(180deg); 
+    } 
+     
+    100% { 
+        transform: translateY(0) skewY(0) rotateZ(360deg); 
+    } 
+}
