@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 12 Q5</title>
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .box {
+        opacity: 0.8;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+
+      .red {
+        top: 20px;
+        left: 20px;
+        background-color: red;
+        z-index: 1;
+      }
+
+      .blue {
+        top: 40px;
+        left: 40px;
+        background-color: blue;
+        z-index: 2;
+      }
+
+      .green {
+        top: 60px;
+        left: 60px;
+        background-color: green;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box red"></div>
+      <div class="box blue"></div>
+      <div class="box green"></div>
+    </div>
+    <p>Z-Index of red is: <span id="zred"></span></p>
+    <p>Z-Index of blue is: <span id="zblue"></span></p>
+    <p>Z-Index of green is: <span id="zgreen"></span></p>
+
+    <script>
+      const redBox = document.querySelector(".red");
+      const blueBox = document.querySelector(".blue");
+      const greenBox = document.querySelector(".green");
+      function updateZIndex() {
+        document.getElementById("zred").textContent =
+          window.getComputedStyle(redBox).zIndex;
+        document.getElementById("zblue").textContent =
+          window.getComputedStyle(blueBox).zIndex;
+        document.getElementById("zgreen").textContent =
+          window.getComputedStyle(greenBox).zIndex;
+      }
+      document.querySelectorAll(".box").forEach((box) => {
+        const initialZIndex = window.getComputedStyle(box).zIndex;
+
+        box.addEventListener("mouseover", function () {
+          this.style.zIndex = "10";
+          updateZIndex();
+        });
+
+        box.addEventListener("mouseout", function () {
+          this.style.zIndex = "";
+          updateZIndex();
+        });
+      });
+
+      updateZIndex();
+    </script>
+  </body>
+</html>
