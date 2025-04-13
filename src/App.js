@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+//Q1
+import React from "react";
+import DisplayImages from "./DisplayImages";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DisplayImages />
     </div>
   );
 }
 
 export default App;
+/* Q2
+import React from 'react';
+import NovellLoginForm from "./NovellLoginForm";
+
+function App() {
+  return (
+    <div>
+      <NovellLoginForm />
+    </div>
+  );
+}
+
+export default App;
+ */
+/* Q3 ( should actually get ProfilePage as root)
+import React from 'react';
+import ProfilePage from "./ProfilePage";
+
+function App() {
+  return (
+    <div>
+      <ProfilePage />
+    </div>
+  );
+}
+*/
